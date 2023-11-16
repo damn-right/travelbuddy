@@ -75,15 +75,15 @@ function bookNow() {
 
 // Sample data for packages
 var packages = [
-    { image: "../assets/img/tokyo.jpg", name: "Tokyo", attractions: "Tokyo is the administrative, cultural, financial, commercial, and educational centre of Japan and the focus of an extensive urban complex that includes Kawasaki and Yokohama.", price: "$600", rating: "4.5" },
-    { image: "../assets/img/india.jpg", name: "India", attractions: "India is part of the continent of Asia. Most of India forms a peninsula, which means it is surrounded by water on three sides. ", price: "$500", rating: "5.0" },
-    { image: "../assets/img/paris.jpg", name: "Paris", attractions: "Paris has been one of the world's major centres of finance, diplomacy, commerce, culture, fashion, gastronomy and many areas.", price: "$700", rating: "4.5" },
-    { image: "../assets/img/dubai.jpg", name: "Dubai", attractions: "Known as the “capital of UAE's economy,” Dubai is a key financial and trading hub, and one of the fastest growing cities in the world.", price: "$1200", rating: "8.0" },
-    { image: "../assets/img/indonesia.jpg", name: "Indonesia", attractions: "Indonesia is the largest country in Southeast Asia, with a maximum dimension from east to west of about 3,200 miles (5,100 km) and an extent from north to south of 1,100 miles (1,800 km)", price: "$300", rating: "4.3" },
-    { image: "../assets/img/germany.jpg", name: "Germany", attractions: "Germany's central and southern regions have forested hills and mountains cut through by the Danube, Main, and Rhine river valleys.", price: "$500", rating: "4.5" },
-    { image: "../assets/img/zimbabwe.jpg", name: "Africa", attractions: "Africa, the second-largest continent, is bounded by the Mediterranean Sea, the Red Sea, the Indian Ocean, and the Atlantic Ocean.", price: "$200", rating: "3.5" },
-    { image: "../assets/img/russia.jpg", name: "Russia", attractions: "Russia, the largest country in the world, occupies one-tenth of all the land on Earth. It spans 11 time zones across two continents (Europe and Asia) and has coasts on three oceans (the Atlantic, Pacific, and Arctic).", price: "$3440", rating: "7.5" },
-    { image: "../assets/img/spain.jpg", name: "Spain", attractions: "Although there is a national parliament, Spain is one of the most decentralized democracies in Europe. Each of its 17 regions manages its own schools, hospitals, and other public services.", price: "$500", rating: "4.5" },
+    { image: "./assets/img/tokyo.jpg", name: "Tokyo", attractions: "Tokyo is the administrative, cultural, financial, commercial, and educational centre of Japan and the focus of an extensive urban complex that includes Kawasaki and Yokohama.", price: "$600", rating: "4.5" },
+    { image: "./assets/img/india.jpg", name: "India", attractions: "India is part of the continent of Asia. Most of India forms a peninsula, which means it is surrounded by water on three sides. ", price: "$500", rating: "5.0" },
+    { image: "./assets/img/paris.jpg", name: "Paris", attractions: "Paris has been one of the world's major centres of finance, diplomacy, commerce, culture, fashion, gastronomy and many areas.", price: "$700", rating: "4.5" },
+    { image: "./assets/img/dubai.jpg", name: "Dubai", attractions: "Known as the “capital of UAE's economy,” Dubai is a key financial and trading hub, and one of the fastest growing cities in the world.", price: "$1200", rating: "8.0" },
+    { image: "./assets/img/indonesia.jpg", name: "Indonesia", attractions: "Indonesia is the largest country in Southeast Asia, with a maximum dimension from east to west of about 3,200 miles (5,100 km) and an extent from north to south of 1,100 miles (1,800 km)", price: "$300", rating: "4.3" },
+    { image: "./assets/img/germany.jpg", name: "Germany", attractions: "Germany's central and southern regions have forested hills and mountains cut through by the Danube, Main, and Rhine river valleys.", price: "$500", rating: "4.5" },
+    { image: "./assets/img/zimbabwe.jpg", name: "Africa", attractions: "Africa, the second-largest continent, is bounded by the Mediterranean Sea, the Red Sea, the Indian Ocean, and the Atlantic Ocean.", price: "$200", rating: "3.5" },
+    { image: "./assets/img/russia.jpg", name: "Russia", attractions: "Russia, the largest country in the world, occupies one-tenth of all the land on Earth. It spans 11 time zones across two continents (Europe and Asia) and has coasts on three oceans (the Atlantic, Pacific, and Arctic).", price: "$3440", rating: "7.5" },
+    { image: "./assets/img/spain.jpg", name: "Spain", attractions: "Although there is a national parliament, Spain is one of the most decentralized democracies in Europe. Each of its 17 regions manages its own schools, hospitals, and other public services.", price: "$500", rating: "4.5" },
 ];
 
 // Sample data for services
