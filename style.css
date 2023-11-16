@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    background-color: #C6C2C9;
+    color: black;
+    padding: 10px 0;
+}
+
+.top-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.brand {
+    display: flex;
+    width: 40px;
+    padding-left: 30px;
+    align-items: center;
+}
+
+.brand img {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+}
+
+.brand span {
+    font-size: 24px;
+}
+
+.navigation {
+    list-style: none;
+    color: black;
+    display: flex;
+}
+
+.navigation li {
+    margin: 0 15px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    height: 100px;
+    padding-left: 0;
+}
+
+.navigation li:hover .dropdown-content {
+    display: block;
+    background-color: transparent;
+    padding-top: 20px;
+    width: 150px;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.user-menu button {
+    margin: 0 10px;
+    padding: 10px 10px;
+    background-color: #726a6a;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 80px;
+    border-radius: 10%;
+}
+
+.user-menu button:hover {
+    background-color: rgb(29, 43, 126);
+}
+
+.welcome-section img {
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+}
+
+.welcome-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.welcome-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.welcome-content h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#bookNowBtn {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* second checkpoint */
+
+.row {
+    display: flex;
+    width: 100%;
+    height: 570px;
+}
+
+.half-width {
+    flex: 1;
+    width: 50%;
+}
+
+.half-width img {
+    width: 100%;
+    height: 100%;
+}
+
+form {
+    margin: 0 auto;
+    padding: 20px;
+    padding-right: 40px;
+    font-family: Arial, sans-serif;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+
+.package-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+
+}
+
+.package-section img {
+    height: 250px;
+    width: 100%;
+
+}
+
+.package-card {
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 10px 10px 5px #f7f0f0;
+}
+
+.package-card button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.services-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffff;
+}
+
+.service-card {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-image: linear-gradient(to right, rgba(144, 62, 198, 0), #E1CECB);
+}
+
+.services-section :hover {
+    transform: translateY(-10px);
+}

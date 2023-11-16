@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/img/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>TravelBuddy</title>
+</head>
+
+<body>
+    <header>
+        <nav class="top-menu">
+            <div class="brand">
+                <img src="../assets/img/logo.png" alt="Brand Logo">
+                <span>TravelBuddy</span>
+            </div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#book-now">Book</a></li>
+                <li class="dropdown">
+                    <a href="#packages-section">Packages</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#packages-section">Tokyo</a></li>
+                        <li><a href="#packages-section">India</a></li>
+                        <li><a href="#packages-section">Paris</a></li>
+                        <li><a href="#packages-section">Dubai</a></li>
+                        <li><a href="#packages-section">More</a></li>
+                    </ul>
+                </li>
+                <li><a href="#services-section">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+            <div class="user-menu">
+                <button id="loginBtn">Login</button>
+                <button id="registerBtn">Register</button>
+            </div>
+        </nav>
+    </header>
+    <section class="welcome-section">
+        <img src="../assets/img/image.jpg" alt="Background Image">
+        <div class="welcome-content">
+            <h1>Welcome to TravelBuddy</h1>
+            <h2 id="placeName">Visit Placename</h2>
+            <button id="bookNowBtn">Book Now</button>
+        </div>
+    </section>
+
+    <div class="row" id="book-now">
+        <div class="half-width">
+            <img src="../assets/img/section_two.jpg" alt="Brand Image">
+        </div>
+        <div class="half-width">
+            <form id="bookingForm">
+                <h2>Want to Plan your vacation?</h2>
+                <p>Fill the form below and let us get back to you with our amazing 100+ packages.</p>
+                <div class="form-group">
+                    <label for="whereTo" class="label">Where to:</label>
+                    <select id="whereTo" name="whereTo" class="input">
+                        <option value="paris">Paris</option>
+                        <option value="newYork">New York</option>
+                        <option value="tokyo">Tokyo</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Singapore">Singapore</option>
+                        <option value="Usa">USA</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="numberOfPersons" class="label">How Many Persons:</label>
+                    <input type="number" id="numberOfPersons" name="numberOfPersons" min="1" class="input"
+                        placeholder="Enter number of persons">
+                </div>
+                <div class="form-group">
+                    <label for="startDate" class="label">Start Date:</label>
+                    <input type="date" id="startDate" name="startDate" min="2023-01-01" class="input"
+                        placeholder="Select start date">
+                </div>
+                <div class="form-group">
+                    <label for="endDate" class="label">End Date:</label>
+                    <input type="date" id="endDate" name="endDate" min="2023-01-01" class="input"
+                        placeholder="Select end date">
+                </div>
+                <div class="form-group">
+                    <label for="description" class="label">Description:</label>
+                    <textarea id="description" name="description" minlength="50" maxlength="500" class="input"
+                        placeholder="Enter a description"></textarea>
+                </div>
+                <button type="button" onclick="bookNow()" class="submit-button">Book Now</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Section packages -->
+    <center>
+        <h2>Our Famous Packages</h2>
+    </center>
+    <div class="package-section" id="packages-section">
+        <!-- Add packages dynamically using JavaScript -->
+    </div>
+
+    <!-- Section services -->
+    <center>
+        <h2>Our Services</h2>
+    </center>
+    <div class="services-section" id="services-section">
+        <!-- Add services dynamically using JavaScript -->
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
