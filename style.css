@@ -139,7 +139,9 @@ header {
 
 .half-width img {
     width: 100%;
-    height: 100%;
+
+    height: 90%;
+    padding-top: 20px;
 }
 
 form {
@@ -192,7 +194,6 @@ form {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 20px 0;
-
 }
 
 .package-section img {
@@ -233,8 +234,8 @@ form {
     width: 30%;
     margin: 10px;
     padding: 15px;
-    border: 1px solid #ccc;
-    background-image: linear-gradient(to right, rgba(144, 62, 198, 0), #E1CECB);
+    border: 1px solid #151010;
+    background-image: linear-gradient(to right, rgba(144, 62, 198, 0), #FFE5CA);
 }
 
 .services-section :hover {
@@ -258,7 +259,7 @@ form {
 }
 
 .gallery-image {
-padding: 10px 2px;
+    padding: 10px 2px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
@@ -266,7 +267,12 @@ padding: 10px 2px;
     height: 200px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
-   
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.gallery-image.show {
+    opacity: 1;
 }
 
 .gallery-image:hover {
@@ -283,7 +289,7 @@ padding: 10px 2px;
     display: flex;
     width: 100%;
     height: 380Px;
-   
+
 }
 
 .about-us-image {
@@ -293,16 +299,21 @@ padding: 10px 2px;
     width: 50%;
 }
 
+.about-us-image img {
+    width: 0;
+    transition: width 1.5s ease;
+}
 
 /* Footer Section */
 footer {
-    
-    background-color: #DDCFCF;
+
+    background-color: #0A3454;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-  
+
 }
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -310,13 +321,16 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .brand {
     width: 160px;
 }
-.brand p{
+
+.brand p {
     font-size: 18px;
-   
+
 }
+
 .social-icons img {
     width: 30px;
     height: 30px;

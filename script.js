@@ -23,53 +23,53 @@ document.getElementById("registerBtn").addEventListener("click", () => {
 
 // second checkpoint
 
- // Set the minimum date for the start date input to today
- document.getElementById('startDate').min = new Date().toISOString().split('T')[0];
+// Set the minimum date for the start date input to today
+document.getElementById('startDate').min = new Date().toISOString().split('T')[0];
 
- // Set the minimum date for the end date input to the selected start date
- document.getElementById('startDate').addEventListener('change', function () {
-     document.getElementById('endDate').min = this.value;
- });
+// Set the minimum date for the end date input to the selected start date
+document.getElementById('startDate').addEventListener('change', function () {
+    document.getElementById('endDate').min = this.value;
+});
 
 function bookNow() {
-        // Get all input elements in the form
-        var inputs = document.getElementById('bookingForm').getElementsByTagName('input');
-        var selects = document.getElementById('bookingForm').getElementsByTagName('select');
-        var textareas = document.getElementById('bookingForm').getElementsByTagName('textarea');
+    // Get all input elements in the form
+    var inputs = document.getElementById('bookingForm').getElementsByTagName('input');
+    var selects = document.getElementById('bookingForm').getElementsByTagName('select');
+    var textareas = document.getElementById('bookingForm').getElementsByTagName('textarea');
 
-        // Check if all inputs are filled
-        var isValid = true;
+    // Check if all inputs are filled
+    var isValid = true;
 
-        for (var i = 0; i < inputs.length; i++) {
-            if (inputs[i].type !== 'button' && inputs[i].value === '') {
-                isValid = false;
-                break;
-            }
+    for (var i = 0; i < inputs.length; i++) {
+        if (inputs[i].type !== 'button' && inputs[i].value === '') {
+            isValid = false;
+            break;
         }
+    }
 
-        // Check if all selects are filled
-        for (var i = 0; i < selects.length; i++) {
-            if (selects[i].value === '') {
-                isValid = false;
-                break;
-            }
+    // Check if all selects are filled
+    for (var i = 0; i < selects.length; i++) {
+        if (selects[i].value === '') {
+            isValid = false;
+            break;
         }
+    }
 
-        // Check if all textareas are filled
-        for (var i = 0; i < textareas.length; i++) {
-            if (textareas[i].value === '') {
-                isValid = false;
-                break;
-            }
+    // Check if all textareas are filled
+    for (var i = 0; i < textareas.length; i++) {
+        if (textareas[i].value === '') {
+            isValid = false;
+            break;
         }
+    }
 
-        // Display alert based on validation result
-        if (isValid) {
-            alert('Booking successful');
-        } else {
-            alert('Please fill in all fields');
-        }
-    
+    // Display alert based on validation result
+    if (isValid) {
+        alert('Booking successful');
+    } else {
+        alert('Please fill in all fields');
+    }
+
 }
 
 
@@ -162,3 +162,49 @@ function createServiceCard(service) {
 
     return card;
 }
+
+// checkpoint 3 js starts here
+
+// Function to check if an element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to add the 'show' class when the image is in the viewport
+function showImage() {
+    const galleryImages = document.querySelectorAll('.gallery-image');
+    galleryImages.forEach((image, index) => {
+        if (isInViewport(image)) {
+            setTimeout(() => {
+                image.style.transition = `opacity 0.5s ease-in-out`;
+                image.style.opacity = 1;
+            }, index * 200); // Adjust the delay timing as needed
+        }
+    });
+}
+function showAboutUsImage() {
+    const images =document.getElementById('about-us');
+        if (isInViewport(images)) {
+            setTimeout(()=>
+            {
+                const image = images.querySelector('img');
+                image.style.width = '50%'; // Set width to 100% to scale up gradually
+            }, index * 200);
+           
+        }
+   
+}
+
+// Event listener for scrolling
+window.addEventListener('scroll', showImage);
+window.addEventListener('scroll', showAboutUsImage);
+
+// Initial check on page load
+showImage();
+showAboutUsImage();
