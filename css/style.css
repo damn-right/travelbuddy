@@ -168,6 +168,10 @@ form {
     border-radius: 4px;
     transition: border-color 0.3s;
 }
+input[type=date]
+{
+    font-family: Arial, sans-serif;
+}
 
 .input:focus {
     outline: none;

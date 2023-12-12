@@ -208,3 +208,24 @@ window.addEventListener('scroll', showAboutUsImage);
 // Initial check on page load
 showImage();
 showAboutUsImage();
+
+function navigateToNextPage(pageName) {
+    let destinationPage;
+  
+    // Determine the destination page based on the parameter
+    if (pageName === 'register') {
+      destinationPage = 'register.html';
+    } else if (pageName === 'login') {
+      destinationPage = 'login.html';
+    } else if (pageName === 'home') {
+      destinationPage = 'home.html';
+    } else {
+      // Default to a specific page when an unknown parameter is passed
+      destinationPage = 'default.html';
+    }
+  
+    // Navigate to the determined page
+    window.location.href = destinationPage;
+  }
+
+  
