@@ -1,181 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./assets/img/logo.png">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/logo.png" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>TravelBuddy</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="top-menu">
-            <div class="brand">
-                <img src="./assets/img/logo.png" alt="Brand Logo">
-                <span>TravelBuddy</span>
-            </div>
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#book-now">Book</a></li>
-                <li class="dropdown">
-                    <a href="#packages-section">Packages</a>
-                    <ul class="dropdown-content">
-                        <li><a href="#packages-section">Tokyo</a></li>
-                        <li><a href="#packages-section">India</a></li>
-                        <li><a href="#packages-section">Paris</a></li>
-                        <li><a href="#packages-section">Dubai</a></li>
-                        <li><a href="#packages-section">More</a></li>
-                    </ul>
-                </li>
-                <li><a href="#services-section">Services</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#about-us">About</a></li>
+      <nav class="top-menu">
+        <div class="brand">
+          <img src="./assets/img/logo.png" alt="Brand Logo" />
+          <span>TravelBuddy</span>
+        </div>
+        <ul class="navigation">
+          <li><a href="#">Home</a></li>
+          <li><a href="#book-now">Book</a></li>
+          <li class="dropdown">
+            <a href="#packages-section">Packages</a>
+            <ul class="dropdown-content">
+              <li><a href="#packages-section">Tokyo</a></li>
+              <li><a href="#packages-section">India</a></li>
+              <li><a href="#packages-section">Paris</a></li>
+              <li><a href="#packages-section">Dubai</a></li>
+              <li><a href="#packages-section">More</a></li>
             </ul>
-            <div class="user-menu">
-                <button id="loginBtn" onclick="navigateToNextPage('login');">Login</button>
-                <button id="registerBtn" onclick="navigateToNextPage('register');">Register</button>
-            </div>
-        </nav>
+          </li>
+          <li><a href="#services-section">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about-us">About</a></li>
+        </ul>
+        <div class="user-menu">
+          <button id="loginBtn" onclick="navigateToNextPage('login');">
+            Login
+          </button>
+          <button id="registerBtn" onclick="navigateToNextPage('register');">
+            Register
+          </button>
+        </div>
+      </nav>
     </header>
     <section class="welcome-section">
-        <img src="./assets/img/image.jpg" alt="Background Image">
-        <div class="welcome-content">
-            <h1>Welcome to TravelBuddy</h1>
-            <h2 id="placeName">Visit Placename</h2>
-            <button id="bookNowBtn">Book Now</button>
-        </div>
+      <img src="./assets/img/image.jpg" alt="Background Image" />
+      <div class="welcome-content">
+        <h1>Welcome to TravelBuddy</h1>
+        <h2 id="placeName">Visit Placename</h2>
+        <button id="bookNowBtn">Book Now</button>
+      </div>
     </section>
 
     <div class="row" id="book-now">
-        <div class="half-width">
-            <img src="./assets/img/section_two.jpg" alt="Brand Image">
-        </div>
-        <div class="half-width">
-            <form id="bookingForm">
-                <h2>Want to Plan your vacation?</h2>
-                <p>Fill the form below and let us get back to you with our amazing 100+ packages.</p>
-                <div class="form-group">
-                    <label for="whereTo" class="label">Where to:</label>
-                    <select id="whereTo" name="whereTo" class="input">
-                        <option value="paris">Paris</option>
-                        <option value="newYork">New York</option>
-                        <option value="tokyo">Tokyo</option>
-                        <option value="Japan">Japan</option>
-                        <option value="Singapore">Singapore</option>
-                        <option value="Usa">USA</option>
-                        <!-- Add more options as needed -->
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="numberOfPersons" class="label">How Many Persons:</label>
-                    <input type="number" id="numberOfPersons" name="numberOfPersons" min="1" class="input"
-                        placeholder="Enter number of persons">
-                </div>
-                <div class="form-group">
-                    <label for="startDate" class="label">Start Date:</label>
-                    <input type="date" id="startDate" name="startDate" min="2023-01-01" class="input"
-                        placeholder="Select start date">
-                </div>
-                <div class="form-group">
-                    <label for="endDate" class="label">End Date:</label>
-                    <input type="date" id="endDate" name="endDate" min="2023-01-01" class="input"
-                        placeholder="Select end date">
-                </div>
-                <div class="form-group">
-                    <label for="description" class="label">Description:</label>
-                    <textarea id="description" name="description" minlength="50" maxlength="500" class="input"
-                        placeholder="Enter a description"></textarea>
-                </div>
-                <button type="button" onclick="bookNow()" class="submit-button">Book Now</button>
-            </form>
-        </div>
+      <div class="half-width">
+        <img src="./assets/img/section_two.jpg" alt="Brand Image" />
+      </div>
+      <div class="half-width">
+        <form id="bookingForm">
+          <h2>Want to Plan your vacation?</h2>
+          <p>
+            Fill the form below and let us get back to you with our amazing 100+
+            packages.
+          </p>
+          <div class="form-group">
+            <label for="whereTo" class="label">Where to:</label>
+            <select id="whereTo" name="whereTo" class="input">
+              <option value="paris">Paris</option>
+              <option value="newYork">New York</option>
+              <option value="tokyo">Tokyo</option>
+              <option value="Japan">Japan</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Usa">USA</option>
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="numberOfPersons" class="label">How Many Persons:</label>
+            <input
+              type="number"
+              id="numberOfPersons"
+              name="numberOfPersons"
+              min="1"
+              class="input"
+              placeholder="Enter number of persons"
+            />
+          </div>
+          <div class="form-group">
+            <label for="startDate" class="label">Start Date:</label>
+            <input
+              type="date"
+              id="startDate"
+              name="startDate"
+              min="2023-01-01"
+              class="input"
+              placeholder="Select start date"
+            />
+          </div>
+          <div class="form-group">
+            <label for="endDate" class="label">End Date:</label>
+            <input
+              type="date"
+              id="endDate"
+              name="endDate"
+              min="2023-01-01"
+              class="input"
+              placeholder="Select end date"
+            />
+          </div>
+          <div class="form-group">
+            <label for="description" class="label">Description:</label>
+            <textarea
+              id="description"
+              name="description"
+              minlength="50"
+              maxlength="500"
+              class="input"
+              placeholder="Enter a description"
+            ></textarea>
+          </div>
+          <button type="button" onclick="bookNow()" class="submit-button">
+            Book Now
+          </button>
+        </form>
+      </div>
     </div>
 
     <!-- Section packages -->
-    <h2 id="service_section" style="font-size: 36px; margin-top: 30px; text-align: center;"><u>Our Packages</u></h2>
+    <h2
+      id="service_section"
+      style="font-size: 36px; margin-top: 30px; text-align: center"
+    >
+      <u>Our Packages</u>
+    </h2>
     <div class="package-section" id="packages-section">
-        <!-- Add packages dynamically using JavaScript -->
+      <!-- Add packages dynamically using JavaScript -->
     </div>
 
     <!-- Section services -->
-    <h2 id="service_section" style="font-size: 36px; margin-top: 30px; text-align: center;"><u>Our Services</u></h2>
+    <h2
+      id="service_section"
+      style="font-size: 36px; margin-top: 30px; text-align: center"
+    >
+      <u>Our Services</u>
+    </h2>
     <div class="services-section" id="services-section">
-        <!-- Add services dynamically using JavaScript -->
+      <!-- Add services dynamically using JavaScript -->
     </div>
-    <hr>
+    <hr />
     <!-- Gallery Section -->
     <div class="gallery-section" id="gallery">
-        <h2 id="service_section" style="font-size: 36px; margin-top: 30px; text-align: center;"><u>Our Gallery</u></h2>
-        <div class="gallery">
-            <img src="./assets/img/about1.jpg" alt="Image 1" class="gallery-image">
-            <img src="./assets/img/about2.jpg" alt="Image 2" class="gallery-image">
-            <img src="./assets/img/about3.jpg" alt="Image 1" class="gallery-image">
-            <img src="./assets/img/about4.jpg" alt="Image 2" class="gallery-image">
-            <img src="./assets/img/about5.jpg" alt="Image 1" class="gallery-image">
-            <img src="./assets/img/about6.jpg" alt="Image 2" class="gallery-image">
-            <img src="./assets/img/about7.jpg" alt="Image 1" class="gallery-image">
-            <img src="./assets/img/about8.jpg" alt="Image 2" class="gallery-image">
-            <!-- Add more images as needed -->
-        </div>
+      <h2
+        id="service_section"
+        style="font-size: 36px; margin-top: 30px; text-align: center"
+      >
+        <u>Our Gallery</u>
+      </h2>
+      <div class="gallery">
+        <img
+          src="./assets/img/about1.jpg"
+          alt="Image 1"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about2.jpg"
+          alt="Image 2"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about3.jpg"
+          alt="Image 1"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about4.jpg"
+          alt="Image 2"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about5.jpg"
+          alt="Image 1"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about6.jpg"
+          alt="Image 2"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about7.jpg"
+          alt="Image 1"
+          class="gallery-image"
+        />
+        <img
+          src="./assets/img/about8.jpg"
+          alt="Image 2"
+          class="gallery-image"
+        />
+        <!-- Add more images as needed -->
+      </div>
     </div>
 
     <!-- About Us Section -->
     <div class="about-section" id="about-us">
-        <div class="row">
-            <div class="about-us-image">
-                <img src="./assets/img/logo.png" alt="travel buddy">
-            </div>
-            <div class="half-width">
-                <div class="company-info">
-                    <!-- Company information, establishment, details -->
-                    <h2>About Us</h2>
-                    <p>Welcome to Travel Buddy, your ultimate destination for memorable travel experiences! Established
-                        in 2010 by our passionate founder, Shiju Shaji, Travel Buddy was born out of a deep love for
-                        exploration and the desire to help people discover the world's wonders.
-                        <br><br>
-                        At Travel Buddy, we believe that every journey is an opportunity for personal growth, learning,
-                        and creating lifelong memories. Whether you seek breathtaking adventures, cultural immersion, or
-                        serene getaways, our team is dedicated to curating tailor-made travel experiences that exceed
-                        your expectations.
-                        <br><br>
-                        <b>Founder's Quote :</b>
-                        <i> "Embark on a journey that transcends destinations; it enriches your soul and broadens your
-                            perspective." - Shiju Shaji</i>
-                        <br><br>
-                        Our mission is to transform your travel aspirations into reality by offering exceptional
-                        services, personalized itineraries, and expert guidance every step of the way. With a commitment
-                        to delivering unparalleled customer satisfaction, we strive to ensure that every trip you take
-                        with Travel Buddy becomes an unforgettable chapter in your life story.
-                    </p>
-                    <!-- Add more details as needed -->
-                </div>
-            </div>
+      <div class="row">
+        <div class="about-us-image">
+          <img src="./assets/img/logo.png" alt="travel buddy" />
         </div>
+        <div class="half-width">
+          <div class="company-info">
+            <!-- Company information, establishment, details -->
+            <h2>About Us</h2>
+            <p>
+              Welcome to Travel Buddy, your ultimate destination for memorable
+              travel experiences! Established in 2010 by our passionate founder,
+              Shiju Shaji, Travel Buddy was born out of a deep love for
+              exploration and the desire to help people discover the world's
+              wonders. <br /><br />
+              At Travel Buddy, we believe that every journey is an opportunity
+              for personal growth, learning, and creating lifelong memories.
+              Whether you seek breathtaking adventures, cultural immersion, or
+              serene getaways, our team is dedicated to curating tailor-made
+              travel experiences that exceed your expectations.
+              <br /><br />
+              <b>Founder's Quote :</b>
+              <i>
+                "Embark on a journey that transcends destinations; it enriches
+                your soul and broadens your perspective." - Shiju Shaji</i
+              >
+              <br /><br />
+              Our mission is to transform your travel aspirations into reality
+              by offering exceptional services, personalized itineraries, and
+              expert guidance every step of the way. With a commitment to
+              delivering unparalleled customer satisfaction, we strive to ensure
+              that every trip you take with Travel Buddy becomes an
+              unforgettable chapter in your life story.
+            </p>
+            <!-- Add more details as needed -->
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Footer Section -->
     <footer>
-        <div class="footer-content">
-            <div class="brand">
-                <img src="./assets/img/logo.png" alt="Brand Logo" style="height: 40px; width: 40px;">
-                <p>Travel Buddy</p>
-            </div>
-            <div>
-                <a href="#">Privacy Policy</a> <br>
-                <a href="#">Terms and conditions</a>
-            </div>
-            <div class="social-icons">
-                <a href="#"><img src="./assets/img/instagram.png" alt="Instagram"></a>
-                <a href="#"><img src="./assets/img/facebook.png" alt="Facebook"></a>
-                <a href="#"><img src="./assets/img/twitter.png" alt="Facebook"></a>
-            </div>
+      <div class="footer-content">
+        <div class="brand">
+          <img
+            src="./assets/img/logo.png"
+            alt="Brand Logo"
+            style="height: 40px; width: 40px"
+          />
+          <p>Travel Buddy</p>
         </div>
-        <div class="copyright">
-            <p>&copy; 2023 Travel Buddy. All Rights Reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a> <br />
+          <a href="#">Terms and conditions</a>
         </div>
+        <div class="social-icons">
+          <a href="#"
+            ><img src="./assets/img/instagram.png" alt="Instagram"
+          /></a>
+          <a href="#"><img src="./assets/img/facebook.png" alt="Facebook" /></a>
+          <a href="#"><img src="./assets/img/twitter.png" alt="Facebook" /></a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Travel Buddy. All Rights Reserved.</p>
+      </div>
     </footer>
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>
