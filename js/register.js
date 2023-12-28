@@ -16,3 +16,19 @@ function validateForm() {
 
     return true;
 }
+
+function validateForm() {
+    var enteredEmail = document.getElementById("emaild").value;
+    var enteredPassword = document.getElementById("password").value;
+
+    var validEmail = "shijujeevzz@gmail.com";
+    var validPassword = "shiju@123";
+
+    if (enteredEmail === validEmail && enteredPassword === validPassword) {
+      alert("Successfully logged in");
+      return true; // Allow form submission
+    } else {
+      alert("Please enter proper email ID and password");
+      return false; // Prevent form submission
+    }
+  }
